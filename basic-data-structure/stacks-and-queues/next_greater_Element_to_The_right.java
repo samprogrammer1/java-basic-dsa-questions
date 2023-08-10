@@ -47,9 +47,6 @@ public class next_greater_Element_to_The_right {
             st.push(arr[i]);
 
         }
-
-
-
         return nge;
     }
 }
