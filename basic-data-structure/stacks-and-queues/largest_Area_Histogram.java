@@ -13,9 +13,6 @@ public class largest_Area_Histogram {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
-        
-
-
         int[] rb = new int[arr.length];
         Stack<Integer> st = new Stack<>();
         st.push(arr.length - 1);
@@ -32,7 +29,6 @@ public class largest_Area_Histogram {
             }
             st.push(i);
         }
-        
 
         int[] lb = new int[arr.length];
         st = new Stack<>();
@@ -52,8 +48,6 @@ public class largest_Area_Histogram {
 
             st.push(i);
         }
-
-        
 
         int maxArea = 0;
         for(int i = 0; i < arr.length; i++){
