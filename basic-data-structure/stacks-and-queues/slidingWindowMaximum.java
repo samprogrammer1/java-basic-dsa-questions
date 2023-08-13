@@ -13,6 +13,7 @@ public class slidingWindowMaximum {
         }
 
         int k = scn.nextInt();
+        scn.close();
 
         Stack<Integer> st = new Stack<>();
         int[] nge = new int[arr.length];
@@ -32,7 +33,6 @@ public class slidingWindowMaximum {
             }
             st.push(i);
         }
-
         int j = 0;
 
         for(int i =0; i <= arr.length - k; i ++){
@@ -43,7 +43,6 @@ public class slidingWindowMaximum {
             while (nge[j] < i +k) {
                 j = nge[j];
             }
-
             System.out.println(arr[j]);
         }
     }
