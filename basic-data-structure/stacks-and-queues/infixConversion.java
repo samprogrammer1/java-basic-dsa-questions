@@ -53,7 +53,6 @@ public class infixConversion {
         String postv1 = postfix.pop();
         String postvalue = postv1 + postv2 + op;
         postfix.push(postvalue);
-
         String prev2 = prefix.pop();
         String prev1 = prefix.pop();
         String preValue = op + prev1 + prev2;
