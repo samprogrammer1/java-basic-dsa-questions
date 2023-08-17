@@ -4,6 +4,7 @@ public class balanced_bracket {
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
         String str = sc.nextLine();
+        sc.close();
 
         Stack<Character> st = new Stack<>();
 
