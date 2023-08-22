@@ -15,26 +15,22 @@ public class StackToQueueAdapter_Add_Efficient {
         int size() {
             return mainS.size();
         }
-
         void add(int val) {
             mainS.push(val);
         }
 
         int remove() {
-            if (size() == 0) {
+            if(size() == 0){
                 System.out.println("Queue underflow");
                 return -1;
-            } else {
+            }else{
                 while (mainS.size() > 1) {
                     helperS.push(mainS.pop());
                 }
-
                 int val = mainS.pop();
-
                 while (helperS.size() > 0) {
-                    mainS.push(helperS.pop());
+                    mainS.push(helperS.size());
                 }
-
                 return val;
             }
         }
