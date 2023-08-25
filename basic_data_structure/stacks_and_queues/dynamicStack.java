@@ -1,8 +1,9 @@
+package stacks_and_queues;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class BuildNormal {
-
+public class dynamicStack {
     public static class CustomStack {
         int[] data;
         int tos;
@@ -25,7 +26,13 @@ public class BuildNormal {
 
         void push(int val){
             if(tos == data.length - 1){
-                System.out.println("Stack overflow");
+                int[] newData = new int[2 * data.length];
+                for (int i = 0; i < data.length; i++) {
+                    newData[i] = data[i];
+                }
+                data = newData;
+                tos++;
+                data[tos] = val;
             }else{
                 tos++;
                 data[tos] = val;

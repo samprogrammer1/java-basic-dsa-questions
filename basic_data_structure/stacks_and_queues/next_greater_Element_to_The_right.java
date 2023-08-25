@@ -1,3 +1,5 @@
+package stacks_and_queues;
+
 import java.util.*;
 
 public class next_greater_Element_to_The_right {

@@ -1,3 +1,5 @@
+package stacks_and_queues;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
