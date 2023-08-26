@@ -22,6 +22,7 @@ public class SmallestNumberFollowingPattern {
                 num++;
 
                 while(st.size() > 0){
+                                       
                     System.out.print(st.pop());
                 }
             }
