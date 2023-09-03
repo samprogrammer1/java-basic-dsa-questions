@@ -1,9 +1,6 @@
 package linked_list_questions;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-public class remove_last_in_linked_list {
+public class remove_at_llinked_list {
     public static class Node {
         int data;
         Node next;
@@ -122,22 +119,39 @@ public class remove_last_in_linked_list {
         }
 
         public void removeLast() {
-            // write your code here
             if (size == 0) {
                 System.out.println("List is empty");
             } else if (size == 1) {
                 head = tail = null;
                 size = 0;
             } else {
-                Node temp = new Node();
-                for(int i = 0; i < size - 2; i++){
+                Node temp = head;
+                for (int i = 0; i < size - 2; i++) {
                     temp = temp.next;
                 }
+
                 tail = temp;
                 tail.next = null;
                 size--;
             }
+        }
 
+        public void removeAt(int idx) {
+            // write your code here
+            if(idx < 0 || idx >= size){
+                System.out.println("Invalid arguments");
+            }else if(idx == 0){
+                removeFirst();
+            }else if(idx == size){
+                removeLast();
+            }else{
+                Node temp = head;
+                for(int i =0 ; i < idx - 1; i++){
+                    temp = temp.next;
+                }
+                temp = temp.next.next;
+                size--;
+            }
         }
     }
 
@@ -181,6 +195,9 @@ public class remove_last_in_linked_list {
                 list.addAt(idx, val);
             } else if (str.startsWith("removeLast")) {
                 list.removeLast();
+            } else if (str.startsWith("removeAt")) {
+                int idx = Integer.parseInt(str.split(" ")[1]);
+                list.removeAt(idx);
             }
             str = br.readLine();
         }
