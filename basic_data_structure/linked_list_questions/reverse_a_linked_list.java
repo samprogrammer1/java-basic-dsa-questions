@@ -3,7 +3,7 @@ package linked_list_questions;
 import java.io.*;
 import java.util.*;
 
-public class remove_at_llinked_list {
+public class reverse_a_linked_list {
     public static class Node {
         int data;
         Node next;
@@ -140,20 +140,46 @@ public class remove_at_llinked_list {
         }
 
         public void removeAt(int idx) {
-            // write your code here
-            if(idx < 0 || idx >= size){
+            if (idx < 0 || idx >= size) {
                 System.out.println("Invalid arguments");
-            }else if(idx == 0){
+            } else if (idx == 0) {
                 removeFirst();
-            }else if(idx == size){
+            } else if (idx == size - 1) {
                 removeLast();
-            }else{
+            } else {
                 Node temp = head;
-                for(int i =0 ; i < idx - 1; i++){
+                for (int i = 0; i < idx - 1; i++) {
                     temp = temp.next;
                 }
-                temp = temp.next.next;
+
+                temp.next = temp.next.next;
                 size--;
+            }
+        }
+
+        private Node getNodeAt(int idx) {
+            Node temp = head;
+            for (int i = 0; i < idx; i++) {
+                temp = temp.next;
+            }
+            return temp;
+        }
+
+        public void reverseDI() {
+            // write your code here
+            int li = 0; 
+            int ri = size - 1;
+
+            while(li < ri){
+                Node left = getNodeAt(li);
+                Node right =  getNodeAt(ri);
+
+                int temp = left.data;
+                left.data = right.data;
+                right.data = temp;
+
+                li++;
+                ri--;
             }
         }
     }
@@ -201,6 +227,8 @@ public class remove_at_llinked_list {
             } else if (str.startsWith("removeAt")) {
                 int idx = Integer.parseInt(str.split(" ")[1]);
                 list.removeAt(idx);
+            } else if (str.startsWith("reverseDI")) {
+                list.reverseDI();
             }
             str = br.readLine();
         }
