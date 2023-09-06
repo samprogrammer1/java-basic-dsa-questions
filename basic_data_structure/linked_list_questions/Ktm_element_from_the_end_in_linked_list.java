@@ -205,16 +205,13 @@ public class Ktm_element_from_the_end_in_linked_list {
             // write your code here
             Node s = head;
             Node f = head;
-
             for (int i = 0; i < k; i++) {
                 f = f.next;
             }
-
             while(f != tail){
                 s = s.next;
                 f = f.next;
             }
-
             return s.data;
         }
     }
