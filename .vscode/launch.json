@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Ktm_element_from_the_end_in_linked_list",
+            "request": "launch",
+            "mainClass": "linked_list_questions.Ktm_element_from_the_end_in_linked_list",
+            "projectName": "java_e60eed8e"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

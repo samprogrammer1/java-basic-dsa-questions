@@ -75,9 +75,12 @@ public class linked_list_to_queue_adapter {
                 System.out.println(qu.size());
             }else if(str.startsWith("display")){
                 LinkedList<Integer> items = qu.display();
+                System.out.print("[");
                 for (int i = 0; i < items.size(); i++) {
-                    System.out.println(items.get(i));
+                    System.out.print(items.get(i) + " ");
                 }
+                System.out.print("]");
+                System.out.println();
             }
             str = br.readLine();
         }
