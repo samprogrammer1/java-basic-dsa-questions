@@ -3,7 +3,7 @@ package linked_list_questions;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class merge_sort_a_linked_list {
+public class remove_dublicates_in_sorted_linked_list {
     public static class Node {
         int data;
         Node next;
@@ -132,6 +132,7 @@ public class merge_sort_a_linked_list {
                 for (int i = 0; i < size - 2; i++) {
                     temp = temp.next;
                 }
+
                 tail = temp;
                 tail.next = null;
                 size--;
@@ -254,33 +255,54 @@ public class merge_sort_a_linked_list {
 
             return ml;
         }
-        // write your code here
-        public static Node midNode(Node head , Node tail){
+
+        public static Node midNode(Node head, Node tail) {
             Node f = head;
             Node s = head;
-            while(f != tail && f.next  != tail){
+
+            while (f != tail && f.next != tail) {
                 f = f.next.next;
                 s = s.next;
             }
+
             return s;
         }
+
         public static LinkedList mergeSort(Node head, Node tail) {
-            // write your code here
-            if(head == tail){
+            if (head == tail) {
                 LinkedList br = new LinkedList();
                 br.addLast(head.data);
                 return br;
             }
+
             Node mid = midNode(head, tail);
             LinkedList fsh = mergeSort(head, mid);
             LinkedList ssh = mergeSort(mid.next, tail);
-            LinkedList cl = LinkedList.mergeTwoSortedLists(fsh, ssh);
-            return cl;
+            LinkedList sl = mergeTwoSortedLists(fsh, ssh);
+            return sl;
         }
+
+        public void removeDuplicates() {
+            // write your code here
+            LinkedList res = new LinkedList();
+            
+            while (this.size() > 0) {
+                int val = this.getFirst();
+                this.removeFirst();;
+                if(res.size() == 0 || res.tail.data != val){
+                    res.addLast(val);
+                }
+            }
+            this.head = res.head;
+            this.tail = res.tail;
+            this.size = res.size;
+        }
+        
     }
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         int n1 = Integer.parseInt(br.readLine());
         LinkedList l1 = new LinkedList();
         String[] values1 = br.readLine().split(" ");
@@ -289,8 +311,8 @@ public class merge_sort_a_linked_list {
             l1.addLast(d);
         }
 
-        LinkedList sorted = LinkedList.mergeSort(l1.head, l1.tail);
-        sorted.display();
+        l1.display();
+        l1.removeDuplicates();
         l1.display();
     }
 }
