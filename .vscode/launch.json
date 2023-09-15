@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "odd_even_linked_list",
+            "request": "launch",
+            "mainClass": "linked_list_questions.odd_even_linked_list",
+            "projectName": "java_e60eed8e"
+        },
+        {
+            "type": "java",
             "name": "remove_dublicates_in_sorted_linked_list",
             "request": "launch",
             "mainClass": "linked_list_questions.remove_dublicates_in_sorted_linked_list",
