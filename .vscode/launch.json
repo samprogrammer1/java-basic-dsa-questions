@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "k_reverse_linked_list",
+            "request": "launch",
+            "mainClass": "linked_list_questions.k_reverse_linked_list",
+            "projectName": "java_e60eed8e"
+        },
+        {
+            "type": "java",
             "name": "odd_even_linked_list",
             "request": "launch",
             "mainClass": "linked_list_questions.odd_even_linked_list",
