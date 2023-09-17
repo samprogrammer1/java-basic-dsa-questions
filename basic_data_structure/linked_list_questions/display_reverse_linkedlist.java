@@ -3,7 +3,7 @@ package linked_list_questions;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class k_reverse_linked_list {
+public class display_reverse_linkedlist {
     public static class Node {
         int data;
         Node next;
@@ -284,13 +284,16 @@ public class k_reverse_linked_list {
 
         public void removeDuplicates() {
             LinkedList res = new LinkedList();
+
             while (this.size() > 0) {
                 int val = this.getFirst();
                 this.removeFirst();
+
                 if (res.size() == 0 || val != res.tail.data) {
                     res.addLast(val);
                 }
             }
+
             this.head = res.head;
             this.tail = res.tail;
             this.size = res.size;
@@ -329,39 +332,52 @@ public class k_reverse_linked_list {
         }
 
         public void kReverse(int k) {
-            // write your code here
             LinkedList prev = null;
 
             while (this.size > 0) {
                 LinkedList curr = new LinkedList();
 
-                if(this.size >= k){
-                    for(int i = 0; i < k; i++){
-                        int val = this.getFirst();
-                        this.removeFirst();;
-                        curr.addFirst(val);
-                    }
-                }else {
-                    int os = this.size;
-                    for (int i = 0; i < os; i++) {
+                if (this.size >= k) {
+                    for (int i = 0; i < k; i++) {
                         int val = this.getFirst();
                         this.removeFirst();
                         curr.addFirst(val);
                     }
+                } else {
+                    int sz = this.size;
+                    for (int i = 0; i < sz; i++) {
+                        int val = this.getFirst();
+                        this.removeFirst();
+                        curr.addLast(val);
+                    }
                 }
 
-                if(prev == null){
+                if (prev == null) {
                     prev = curr;
-                }else{
+                } else {
                     prev.tail.next = curr.head;
                     prev.tail = curr.tail;
-                    prev.size = curr.size;
+                    prev.size += curr.size;
                 }
             }
 
             this.head = prev.head;
+            this.tail = prev.tail;
             this.size = prev.size;
-            this.size = prev.size;
+        }
+
+        private void displayReverseHelper(Node node) {
+            // write your code here
+            if(node == null){
+                return;
+            }
+            displayReverseHelper(node.next);
+            System.out.print(node.data +" ");
+        }
+
+        public void displayReverse() {
+            displayReverseHelper(head);
+            System.out.println();
         }
     }
 
@@ -376,15 +392,13 @@ public class k_reverse_linked_list {
             l1.addLast(d);
         }
 
-        int k = Integer.parseInt(br.readLine());
         int a = Integer.parseInt(br.readLine());
         int b = Integer.parseInt(br.readLine());
 
         l1.display();
-        l1.kReverse(k);
-        l1.display();
-        l1.addFirst(a);
-        l1.addLast(b);
+        l1.displayReverse();
+        l1.addLast(a);
+        l1.addFirst(b);
         l1.display();
     }
 }
