@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "is_linkedlist_palindromic_question",
+            "request": "launch",
+            "mainClass": "linked_list_questions.is_linkedlist_palindromic_question",
+            "projectName": "java_e60eed8e"
+        },
+        {
+            "type": "java",
             "name": "reverse_a_linked_list_using_pointer",
             "request": "launch",
             "mainClass": "linked_list_questions.reverse_a_linked_list_using_pointer",
