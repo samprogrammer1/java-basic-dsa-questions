@@ -3,7 +3,7 @@ package linked_list_questions;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class fold_a_linked_list {
+public class add_two_linkedlists {
     public static class Node {
         int data;
         Node next;
@@ -395,28 +395,8 @@ public class fold_a_linked_list {
             tail.next = null;
         }
 
-        // write your code here
-        private void foldHelper(Node right, int floor) {
-            if (right == null){
-                return;
-            }
-            foldHelper(right.next, floor + 1);
-
-            if(floor > size / 2) {
-                Node temp = fleft.next;
-                fleft.next = right;
-                right.next = temp;
-                fleft = temp;
-            }else if(floor == size /2){
-                tail = right;
-                tail.next = null;
-            }
-        }
-
-        Node fleft;
-        public void fold() {
-            fleft = head;
-            foldHelper(fleft, 0);
+        public static LinkedList addTwoLists(LinkedList one, LinkedList two) {
+            // write your code here
         }
     }
 
@@ -431,14 +411,24 @@ public class fold_a_linked_list {
             l1.addLast(d);
         }
 
+        int n2 = Integer.parseInt(br.readLine());
+        LinkedList l2 = new LinkedList();
+        String[] values2 = br.readLine().split(" ");
+        for (int i = 0; i < n2; i++) {
+            int d = Integer.parseInt(values2[i]);
+            l2.addLast(d);
+        }
+
+        LinkedList sum = LinkedList.addTwoLists(l1, l2);
+
         int a = Integer.parseInt(br.readLine());
         int b = Integer.parseInt(br.readLine());
 
         l1.display();
-        l1.fold();
-        l1.display();
-        l1.addFirst(a);
-        l1.addLast(b);
-        l1.display();
+        l2.display();
+        sum.display();
+        sum.addFirst(a);
+        sum.addLast(b);
+        sum.display();
     }
 }
