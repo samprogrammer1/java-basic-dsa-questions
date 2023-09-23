@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "add_two_linkedlists",
+            "request": "launch",
+            "mainClass": "linked_list_questions.add_two_linkedlists",
+            "projectName": "java_34796215"
+        },
+        {
+            "type": "java",
             "name": "fold_a_linked_list",
             "request": "launch",
             "mainClass": "linked_list_questions.fold_a_linked_list",
