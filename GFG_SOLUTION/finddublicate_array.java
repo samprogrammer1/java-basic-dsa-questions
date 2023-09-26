@@ -1,8 +1,5 @@
 package GFG_SOLUTION;
-
-import java.io.*;
 import java.util.*;
-import java.util.Map.Entry;
 
 class finddublicate_array {
     public static void main(String[] args) {
@@ -25,11 +22,9 @@ class finddublicate_array {
                 result.add(i);
             }
         }
-
         if (result.isEmpty()) {
             result.add(-1);
         }
-
         return result;
     }
 }
