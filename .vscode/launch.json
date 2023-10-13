@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "palindrome",
+            "request": "launch",
+            "mainClass": "string.palindrome",
+            "projectName": "java_34796215"
+        },
+        {
+            "type": "java",
             "name": "longestCommonPrefix",
             "request": "launch",
             "mainClass": "GFG_SOLUTION.longestCommonPrefix",
