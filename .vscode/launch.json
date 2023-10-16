@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "world_pattern",
+            "request": "launch",
+            "mainClass": "string.world_pattern",
+            "projectName": "java_34796215"
+        },
+        {
+            "type": "java",
             "name": "palindrome",
             "request": "launch",
             "mainClass": "string.palindrome",
