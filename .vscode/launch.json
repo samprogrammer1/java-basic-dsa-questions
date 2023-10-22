@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "date_and_time",
+            "request": "launch",
+            "mainClass": "hackerrank.date_and_time",
+            "projectName": "java_34796215"
+        },
+        {
+            "type": "java",
             "name": "SubsetOFArray",
             "request": "launch",
             "mainClass": "SubsetOFArray",
