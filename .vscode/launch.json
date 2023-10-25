@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "rotateArray",
+            "request": "launch",
+            "mainClass": "rotateArray",
+            "projectName": "java_34796215"
+        },
+        {
+            "type": "java",
             "name": "Search_in_Rotated_Sorted_Array",
             "request": "launch",
             "mainClass": "Search_in_Rotated_Sorted_Array",
