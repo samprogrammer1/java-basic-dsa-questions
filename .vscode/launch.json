@@ -6,9 +6,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "firstMissingPositive",
+            "name": "rotateArray",
             "request": "launch",
-            "mainClass": "firstMissingPositive",
+            "mainClass": "rotateArray",
             "projectName": "java_34796215"
         },
         {
