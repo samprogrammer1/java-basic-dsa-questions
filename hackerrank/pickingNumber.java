@@ -1,4 +1,4 @@
-package hackerrank;
+
 
 import java.util.List;
 
@@ -11,9 +11,6 @@ public class pickingNumber {
         for (int num : a) {
             counts[num]++;
         }
-        
-        
-        /* Find adjacent pair with largest sum */
         int max = 2;
         for (int i = 1; i < MAX_VALUE; i++) {
             int adjacentSum = counts[i] + counts[i-1];
