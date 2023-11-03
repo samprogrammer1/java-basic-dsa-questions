@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class h_index {
      public static int hIndex(int[] citations) {
+        // array reverse
         Arrays.sort(citations);
         int n = citations.length;
         int hIndex = 0;
