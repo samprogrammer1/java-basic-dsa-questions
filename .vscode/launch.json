@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Remove_Outermost_Parentheses",
+            "request": "launch",
+            "mainClass": "leetcode.Remove_Outermost_Parentheses",
+            "projectName": "java_34796215"
+        },
+        {
+            "type": "java",
             "name": "getConcatenation",
             "request": "launch",
             "mainClass": "leetcode.getConcatenation",

@@ -5,7 +5,6 @@ public class sqrt {
         if (x < 0) {
             throw new IllegalArgumentException("Square root is undefined for negative numbers");
         }
-
         long r = x;
         while(r*r > x){
             r = (r + x/r) / 2;
