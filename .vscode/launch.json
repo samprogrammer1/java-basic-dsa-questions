@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "greatCommonDivisor",
+            "request": "launch",
+            "mainClass": "leetcode.greatCommonDivisor",
+            "projectName": "java_34796215"
+        },
+        {
+            "type": "java",
             "name": "editDistance",
             "request": "launch",
             "mainClass": "leetcode.editDistance",
