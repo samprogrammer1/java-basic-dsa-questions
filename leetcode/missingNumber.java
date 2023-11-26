@@ -15,7 +15,7 @@ public class missingNumber {
             actualSum += num;
         }
 
-        // The missing number is the difference between the expected and actual sums
+        
         return expectedSum - actualSum;
     }
 
