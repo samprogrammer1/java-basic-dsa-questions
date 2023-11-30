@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MaximumProductSubarray",
+            "request": "launch",
+            "mainClass": "MaximumProductSubarray",
+            "projectName": "java_34796215"
+        },
+        {
+            "type": "java",
+            "name": "MaximumSubarray",
+            "request": "launch",
+            "mainClass": "leetcode.MaximumSubarray",
+            "projectName": "java_34796215"
+        },
+        {
+            "type": "java",
             "name": "sortedSquares",
             "request": "launch",
             "mainClass": "leetcode.sortedSquares",
