@@ -1,4 +1,3 @@
-package leetcode;
 
 public class getConcatenation {
     public static int[] getConcatenationValue(int[] nums) {

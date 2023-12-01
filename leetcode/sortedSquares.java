@@ -1,4 +1,4 @@
-package leetcode;
+
 
 public class sortedSquares {
     public static int[] sortedSquaresValue(int[] nums) {

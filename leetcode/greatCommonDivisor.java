@@ -1,4 +1,3 @@
-package leetcode;
 
 public class greatCommonDivisor {
     public static String gcdOfStrings(String str1, String str2) {
