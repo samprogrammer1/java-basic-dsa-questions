@@ -1,4 +1,3 @@
-package leetcode;
 
 public class h_index_2 {
     public static int hIndex(int[] citations) {

@@ -1,4 +1,3 @@
-package leetcode;
 
 public class MajorityElementFinder {
     public static int majorityElement(int[] nums) {
