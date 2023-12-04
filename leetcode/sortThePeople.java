@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class sortThePeople {
-     public static String[] sortPeople(String[] names, int[] heights) {
+    public static String[] sortPeople(String[] names, int[] heights) {
         String[] result = new String[names.length];
 
         HashMap<Integer, String> res = new HashMap<>();
@@ -14,7 +14,6 @@ public class sortThePeople {
         for (int i = heights.length - 1; i >= 0; i--) {
             result[index++] = res.get(heights[i]);
         }
-
         return result;
     }
 

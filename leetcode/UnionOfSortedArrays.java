@@ -41,15 +41,12 @@ public class UnionOfSortedArrays {
             set.add(arr1[i]);
             i++;
         }
-
         while (j < arr2.length) {
             set.add(arr2[j]);
             j++;
         }
-
         // Convert the set to the array list
         unionList.addAll(set);
-
         return unionList;
     }
 }
