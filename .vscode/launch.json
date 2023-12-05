@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FlipAndInvertImage",
+            "request": "launch",
+            "mainClass": "FlipAndInvertImage",
+            "projectName": "java_34796215"
+        },
+        {
+            "type": "java",
             "name": "smallerNumbers",
             "request": "launch",
             "mainClass": "smallerNumbers",
