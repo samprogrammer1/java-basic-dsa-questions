@@ -8,9 +8,10 @@ public class h_index {
         int n = citations.length;
         int hIndex = 0;
 
-        for (int i = 0; i < n; i++) {
-            int h = Math.min(citations[i], n -i);
-            hIndex = Math.max(hIndex, h);
+        for (int i = 1; i <= n; i++) {
+            if(citations[n-i] < i) break;
+            // int h = Math.min(citations[i], n -i);
+            // hIndex = Math.max(hIndex, h);
         }
 
         return hIndex;
