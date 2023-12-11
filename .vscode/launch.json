@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SingleNumber",
+            "request": "launch",
+            "mainClass": "SingleNumber",
+            "projectName": "java_34796215"
+        },
+        {
+            "type": "java",
             "name": "isSorted",
             "request": "launch",
             "mainClass": "isSorted",
