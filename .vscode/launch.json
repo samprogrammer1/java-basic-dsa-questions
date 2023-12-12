@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FindPeakElement",
+            "request": "launch",
+            "mainClass": "FindPeakElement",
+            "projectName": "java_34796215"
+        },
+        {
+            "type": "java",
             "name": "SingleNumber",
             "request": "launch",
             "mainClass": "SingleNumber",
